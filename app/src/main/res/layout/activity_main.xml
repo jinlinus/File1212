@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_tb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Toolbar_Theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/FL1">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/FL1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/material"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FloatMini1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="140dp"
+            android:visibility="invisible"
+            app:backgroundTint="@color/colorPrimaryVariant"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_edit_aa_24dp"
+            app:tint="@color/colorPrimaryText" />
+        <!-- app:pressedTraslationZ = button을 클릭했을 경우에 나타나는 그림자의 범위 -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FloatMini2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="80dp"
+            android:visibility="invisible"
+            app:backgroundTint="@color/colorPrimaryVariant"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_send_black_24dp"
+            app:tint="@color/colorPrimaryText" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FloatAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="float_test"
+            app:backgroundTint="@color/colorPrimaryVariant"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_share_gold_24dp"
+            app:tint="@color/colorPrimaryText" />
+        <!-- app:backgroundTint = FloatingActionButton의 배경 색상을 변경하는 속성이다. -->
+        <!-- app:fabSize 속성 =  버튼의 크기를 설정한다. (auto, normal, mini) -->
+        <!-- 앞서 app:srcCompat 속성을 사용하여 drawable 폴더에 추가한 icon을 사용하겠다고 선언을 하였다.
+                 그런데 icon 추가 시 특정 색상을 적용하겠다고 설정하였음에도 제대로 적용되지 않는 현상이 발생하였다.
+                 이를 해결하기 위해 app:tint 속성을 사용하여 FloatingActionButton 내부의 icon 색상을 변경하였다.-->
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/material"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FL1"
+        app:menu="@menu/bottom_navigation" />
+    <!-- 하단의 내비게이션 뷰에서 icon 및에 있는 title의 경우
+        3개 이상의 항목을 추가하게 되면 사용자가 누른 항목을 제외하고는 보이지 않게 된다.
+        해결방안: app:labelVisibilityMode 속성을 추가하여 선택하지 않은 항목도
+        항상 글자가 보이도록 해준다.
+        labeled = 글자가 보이도록 설정한다.
+        unlabeled = 글자가 보이지 않도록 설정한다.-->
+
+    <!--Render problem: path.op() not supported 에러 발생
+        build.gradle(Module: app) 파일에서 기존에 추가한 Material Design 관련 코드를
+        아래와 같이 수정한 후 Sync now를 클릭하여 동기화 작업을 수행한다.
+        implementation 'com.google.android.material:material:1.2.0-alpha02' -->
+
+    <!--기존의 ListView를 구성하는 mkdir, rmdir, system folder / file 목록,
+        EditText, 다음 화면으로 Activity를 전환하는 버튼 등의 재구성이 필요하다.-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

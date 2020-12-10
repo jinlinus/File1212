@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <!-- FloatingActionButton이 비활성화되었을 때 나타나는 효과를 설정한다. -->
+    <!-- float_open.xml 파일에 주석을 상세히 작성해놓았다. -->
+    <!-- float_open.xml 파일에서 설정했던 scale값들을 비교해보면버튼을 활성화 시킬 때에는
+    시작 포인트를 0으로 설정한 다음 주고자 하는 효과에 따라 값을 임의로 설정하였다.
+    반면에 버튼을 비활성화 시킬 때에는 시작 포인트를 할당한 값으로 한 다음
+    끝 포인트를 0으로 설정한 것을 알 수 있다.-->
+    <scale
+        android:interpolator="@android:anim/linear_interpolator"
+        android:duration="300"
+        android:fromXScale="0.8"
+        android:fromYScale="0.8"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="0.0"
+        android:toYScale="0.0"/>
+
+    <alpha
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="300"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0"/>
+
+</set>

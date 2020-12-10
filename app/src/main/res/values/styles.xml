@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- SlidingRootNav 적용을 위해 NoActionBar로 변경한다.. -->
+    <!--Google Material Design Button 설정 -> application의 theme에 Material Components 적용을 위해
+        values 폴더 - styles.xml 파일에서 theme을 수정해야 한다. -->
+
+        <!-- Customize color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorPrimaryText</item>
+        <item name="colorAccent">@color/colorBackground</item>
+        <item name="colorOnSecondary">@color/colorB</item>
+    </style>
+
+    <style name="Toolbar_Theme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/font2</item>
+    </style>
+<!-- Toolbar의 폰트 설정을 위한 작업을 수행한다. -->
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+<!-- drawable 폴더에 생성한 splash.xml 파일을 Splash Screen과 연결시킨다. -->
+</resources>

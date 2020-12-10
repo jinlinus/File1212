@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Page1"
+        android:enabled="true"
+        android:icon="@drawable/ic_style_black_24dp"
+        android:title="Main"/>
+    <!--Category 추가 = Preview 화면에서는 상단에 MenuBar가 표시되지만 Application 실행 결과를 보면
+    BottomNavigationView에 설정한 해당 항목과 title, 그리고 icon이 정상적으로 출력되는 것을 알 수 있다.-->
+    <!--icon의 경우 어떤 기능을 추가할 것인지에 따라 모양을 달리함으로써 혼동이 오지 않게 할 예정이다.-->
+    <item
+        android:id="@+id/Page2"
+        android:enabled="true"
+        android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+        android:title="File List"/>
+
+    <item
+        android:id="@+id/Page3"
+        android:enabled="true"
+        android:icon="@drawable/ic_web_black_24dp"
+        android:title="Web"/>
+
+     <item
+         android:id="@+id/Page4"
+         android:enabled="true"
+         android:icon="@drawable/ic_insert_comment_black_24dp"
+         android:title="Comment"/>
+
+</menu>

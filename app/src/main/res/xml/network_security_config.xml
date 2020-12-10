@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Webpage not available
+     : The webpage at http://www.naver.com/ could not be loaded because:
+       net;;ERR_CLEARTEXT_NOT_PERMITTED 에러가 발생한다.
+      : targetSdkVersion >= 28일 경우에 text로 url에 접근하는 방법이 허용되지 않는다.-->
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://m.naver.com</domain>
+    </domain-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://m.google.com</domain>
+    </domain-config>
+
+<!--     <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://m.daum.com</domain>
+    </domain-config> -->
+
+</network-security-config>

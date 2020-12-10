@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <!-- FloatingActionButton이 활성화 되었을 때 나타나는 효과를 설정한다. -->
+    <!-- ** Scale = 특정 위젯이나 임의로 정한 대상의 크기를 확대 및 축소하는 효과를 구현한다. -->
+    <!-- fromXScale = 시작하는 X의 크기 fromYScale = 시작하는 Y의 크기
+    pivotX = X좌표(X축)의 중심 pivotY = Y좌표(Y축)의 중심
+    ** pivot(중심점)을 기준으로 크기가 커지거나 작아진다.
+    toXScale = 끝나는 시점의 X좌표(X축)의 크기 toYScale = 끝나는 시점의 Y좌표(Y축)의 크기
+    duration = Animation 효과의 적용 시간
+    ** interpolator = Animation이 실행되는 동안 횟수/속도 등을 조절할 수 있고,
+    시작과 종료 각각의 경우에 대한효과도 추가할 수 있다.
+    linear_interpolator = Animation의 효과가 나타나는 속도를 일정하게 설정한다.
+    app 실행 시 메인 FloatingActionButton 클릭 시 보이지 않았던
+    2개의 FloatingActionButton이 동일한 속도로 나타나는 것을 알 수 있다. -->
+    <scale
+        android:interpolator="@android:anim/linear_interpolator"
+        android:duration="300"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="0.8"
+        android:toYScale="0.8"/>
+
+    <alpha
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="300"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
+    <!-- ** alpha = View의 투명도를 설정한다.
+   duration = Animation 효과의 적용 시간(실행 시간)
+   이 프로젝트에서는 FloatingActionButton의 Animation 효과를 지정하였다.
+   fromAlpha = 시작 투명도
+   : fromAlpha = 0.0 이라는 것은 Animation 효과가 시작될 때에는 투명한 상태라는 것을 의미한다.
+   toAlpha = 끝 투명도
+   : toAlpha = 1.0 이라는 것은 AnImation 효과가 끝날 때에는 선명하게 보이는 상태라는 것을 의미한다.
+    ** Alpha값의 경우 0.0 ~ 1.0 사이에서 사용자가 원하는 만큼 조절 할 수가 있다. -->
+</set>
