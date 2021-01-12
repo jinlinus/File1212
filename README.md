@@ -8,6 +8,6 @@
 프로젝트 진행 내용을 아래의 블로그에 정리하여 업로드하였습니다.
 
 * 한 학기동안 진행한 프로젝트 강의 중 하나로 이 작업을 진행하였으며 다음과 같은 라이브러리를 활용하였음을 알려드립니다.
-- implementation 'com.google.android.material:material:1.2.0-alpha02'
--
+= implementation 'com.google.android.material:material:1.2.0-alpha02'
+=
 https://it-dev-jinlinus.tistory.com/
