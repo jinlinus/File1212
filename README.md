@@ -12,4 +12,19 @@
 ##### 'com.google.android.material:material:1.2.0-alpha02'
 ##### 'com.yarolegovich:sliding-root-nav:1.0.2'
 
+다음은 프로젝트 진행 도중 추가 및 활용한 View의 목록입니다.
+##### Toolbar
+##### MaterialButton
+##### FrameLayout
+##### LinearLayout
+##### FloatingActionButton
+##### BottomNavigationView
+##### ImageView
+##### TextView
+##### ListView
+##### WebView
+##### MaterialCardView
+##### Space
+
+
 https://it-dev-jinlinus.tistory.com/
