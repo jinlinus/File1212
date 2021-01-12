@@ -9,7 +9,7 @@
 
 * 한 학기동안 진행한 프로젝트 강의 중 하나로 이 작업을 진행하였으며 다음과 같은 라이브러리를 활용하였음을 알려드립니다.
 
-### 'com.google.android.material:material:1.2.0-alpha02'
-### 'com.yarolegovich:sliding-root-nav:1.0.2'
+##### 'com.google.android.material:material:1.2.0-alpha02'
+##### 'com.yarolegovich:sliding-root-nav:1.0.2'
 
 https://it-dev-jinlinus.tistory.com/
